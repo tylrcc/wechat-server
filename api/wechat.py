@@ -4,10 +4,10 @@ import time
 import xml.etree.ElementTree as ET
 
 app = Flask(__name__)
-TOKEN="test_token"
 
 def verify_signature(signature, timestamp, nonce):
-    items = sorted([TOKEN, timestamp, nonce])
+    token = "test_token"
+    items = sorted([token, timestamp, nonce])
     digest = hashlib.sha1("".join(items).encode("utf-8")).hexdigest()
     return digest == signature
 
