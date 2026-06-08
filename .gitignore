@@ -4,3 +4,4 @@ gitignore:
 - *.pyc
 - .vercel
 - *.log
+.vercel
