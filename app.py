@@ -12,7 +12,7 @@ def verify_signature(signature, timestamp, nonce):
     digest = hashlib.sha1("".join(items).encode("utf-8")).hexdigest()
     return digest == signature
 
-@app.route("/wechat", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def wechat():
     signature = request.args.get("signature", "")
     timestamp = request.args.get("timestamp", "")
