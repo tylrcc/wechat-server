@@ -8,6 +8,10 @@
   ],
   "routes": [
     {
+      "src": "/wechat",
+      "dest": "app.py"
+    },
+    {
       "src": "/(.*)",
       "dest": "app.py"
     }
